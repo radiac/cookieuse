@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Cookie Policy</title>
+    <link rel="stylesheet" type="text/css" href="example.css" />
+    <script src="jquery-1.7.2.min.js"></script>
+    <script src="cookieuse.min.js"></script>
+    <script src="example.js"></script>
+    <script>
+    
+    $(function () {
+        // This manages turning cookies on or off
+        // The code which triggers cookieuse is in example.js
+        var on = $('#cookiesOn').html();
+        var off = $('#cookiesOff').html();
+        var $el = $('#cookiesSettings');
+        function showSettings() {
+            var consent = $.cookieuse.get();
+            if (consent > 0) {
+                $el
+                    .html(on)
+                    .find('button')
+                        .click(function (e) {
+                            $.cookieuse.set(0);
+                            showSettings();
+                        })
+                ;
+            } else {
+                $el 
+                    .html(off)
+                    .find('button')
+                        .click(function (e) {
+                            $.cookieuse.set(1);
+                            showSettings();
+                        })
+                ;
+            }
+        }
+        showSettings();
+    });
+    
+    </script>
+</head>
+<body>
+
+<h1>Cookie Policy</h1>
+
+<h2>What are cookies?</h2>
+
+<p>A cookie is a small text file containing information which a website asks your computer to store for next time you visit. Websites use cookies for lots of different reasons, such as storing preferences, logging you in, keeping track of things in your shopping basket, or telling the website owners how many different people visit the site.</p>
+
+
+<h2>Use of cookies on this website</h2>
+
+<h3>Cookies we set</h3>
+<dl>
+<dt>Cookie use</dt>
+    <dd>Remembers if you have seen the cookie notification</dd>
+</dl>
+
+<h3>Cookies others set</h3>
+<dl>
+<dt>Google Analytics</dt>
+    <dd>This website uses Google's analytics service to measure how many people visit the site, and which pages are visited. For more information about this cookie, see <a href="https://developers.google.com/analytics/resources/concepts/gaConceptsCookies">Google's explanation</a>.</dd>
+</dl>
+
+<h3>Your cookie settings</h3>
+
+<div id="cookiesSettings">
+    <noscript>
+        <p>You have JavaScript disabled. This means that the website will use cookies based on your browser settings.</p>
+    </noscript>
+</div>
+<script type="text/html" id="cookiesOn">
+    <p>This website currently uses all cookies.</p>
+    <p>If you want this website to only use cookies which are strictly necessary, click the button below.</p>
+    <p><button>Turn off optional cookies</button></p>
+    <p>Please note that a cookie will be set to remember your choice.</p>
+</script>
+<script type="text/html" id="cookiesOff">
+    <p>This website currently only uses cookies which are strictly necessary.</p>
+    <p>To allow this website to use all cookies, click the button below.</p>
+    <p><button>Allow all cookies</button></p>
+</script>
+
+<h3>Managing cookies in your browser</h3>
+
+<p>If you would like to know more about cookies, or how to control and delete them, you can visit <a href="http://www.aboutcookies.org/">www.aboutcookies.org</a>.</p>
+
+</body>
+</html>
+

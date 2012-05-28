@@ -1,0 +1,76 @@
+/*
+** Simple styling for cookieuse bar
+*/
+
+/* Bar along the top */
+/*
+.__cookieuse {
+	position:	fixed;
+	top:		0;
+	left:		0;
+	width:		100%;
+	background-position:	right center;
+	background-repeat:		no-repeat;
+	background-image:		url('close.png');
+	background-color:		rgb(220,220,220);
+	background-color:		rgba(220,220,220,0.9);
+}
+*/
+
+/* Bar along the bottom */
+.__cookieuse {
+	position:	fixed;
+	bottom:		0;
+	left:		0;
+	width:		100%;
+	background-position:	right center;
+	background-repeat:		no-repeat;
+	background-image:		url('close.png');
+	background-color:		rgb(220,220,220);
+	background-color:		rgba(220,220,220,0.9);
+}
+
+/* Box in top right */
+/*
+.__cookieuse {
+	position:	fixed;
+	top:		0;
+	right:		0;
+	width:		250px;
+	background-position:	right top;
+	background-repeat:		no-repeat;
+	background-image:		url('close.png');
+	background-color:		rgb(220,220,220);
+	background-color:		rgba(220,220,220,0.9);
+}
+*/
+
+/* Box in bottom right */
+/*
+.__cookieuse {
+	position:	fixed;
+	bottom:		0;
+	right:		0;
+	width:		250px;
+	background-position:	right top;
+	background-repeat:		no-repeat;
+	background-image:		url('close.png');
+	background-color:		rgb(220,220,220);
+	background-color:		rgba(220,220,220,0.9);
+}
+*/
+
+.__cookieuse p {
+	margin:	0.6em;
+	margin-right: 30px;
+}
+
+
+
+
+/*
+** Just for the example pages - you don't need this
+*/
+body {
+	font: 85% verdana;
+}
