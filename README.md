@@ -8,7 +8,7 @@ am not a lawyer, so it is your responsibility to ensure that your use of this
 library meets your legal requirements, and I cannot be held responsible if it
 does not.
 
-Its only dependency is jQuery, and it is 1.2KB when minified. This project is
+Its only dependency is jQuery, and it is 1.3KB when minified. This project is
 released under the MIT license.
 
 Website: http://radiac.net/projects/cookieuse/
@@ -144,6 +144,12 @@ you pay careful attention to load order, you could use this to log every visit
 using GA, but then clear the cookies before the visitor leaves the page -
 although that exercise is left for the reader.
 
+The clear() function will use the same path as specified in the cookieuse
+overlay options. If the cookie has been set on a different path, you can pass
+in a tuple of `[cookie_name, path]`:
+
+    $.cookieuse.clear(['cookie1', '/'], 'cookie2', ...)
+
 
 ### Options
 
@@ -210,6 +216,19 @@ unless you have specified your own consent states
 `refused`
 
 * Callback when the user has refused consent
+
+
+Changelog
+---------
+
+1.0.1 (2012-05-28)
+
+* Added path support to $.cookieuse.clear()
+* Rearranged examples to make files more obvious
+
+1.0.0 (2012-05-28)
+
+* Initial release
 
 
 [ico]: http://www.ico.gov.uk/for_organisations/privacy_and_electronic_communications/the_guide/cookies.aspx

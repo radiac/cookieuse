@@ -36,10 +36,10 @@
         }
     }
     
-    function clearCookie(key) {
+    function clearCookie(key, path) {
         /** Clear a cookie */
         document.cookie = encodeURIComponent(key)
-            + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;'
+            + '=; path=' + (path || options.path) + '; expires=Thu, 01-Jan-1970 00:00:01 GMT;'
         ;
     }
     
@@ -129,7 +129,12 @@
         },
         clear: function () {
             for (var i=0; i<arguments.length; i++) {
-                clearCookie(arguments[i]);
+                var key = arguments[i], path;
+                if (key instanceof Array) {
+                    path = key[1];
+                    key = key[0];
+                }
+                clearCookie(key, path);
             }
         }
     };
