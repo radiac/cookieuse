@@ -3,7 +3,7 @@ Cookieuse
 
 A simple way to get implicit consent to set cookies for your website visitors.
 
-This should help you comply with [EU cookie law legislation][iso_law], and was
+This should help you comply with [EU cookie law legislation][ico_law], and was
 written after the ICO [clarified][ico_implicit] their position on implicit
 consent, so it is not as intrusive as some other cookie consent plugins.
 
