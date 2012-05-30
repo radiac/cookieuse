@@ -3,15 +3,22 @@ Cookieuse
 
 A simple way to get implicit consent to set cookies for your website visitors.
 
-This should help you comply with [EU cookie law legislation][ico], although I
-am not a lawyer, so it is your responsibility to ensure that your use of this
-library meets your legal requirements, and I cannot be held responsible if it
-does not.
+This should help you comply with [EU cookie law legislation][iso_law], and was
+written after the ICO [clarified][ico_implicit] their position on implicit
+consent, so it is not as intrusive as some other cookie consent plugins.
 
 Its only dependency is jQuery, and it is 1.3KB when minified. This project is
 released under the MIT license.
 
 Website: http://radiac.net/projects/cookieuse/
+Example: http://radiac.net/projects/cookieuse/example/
+Code:    https://github.com/radiac/cookieuse
+
+
+Disclaimer: This is provided to make it easier for you to comply with
+the cookie law, but I am not a lawyer and every website is different, so it is
+your responsibility to ensure that your use of this library meets your legal
+requirements, and I cannot be held responsible if it does not.
 
 
 Overview
@@ -83,6 +90,9 @@ You can also pass some options to `cookieuse` (detailed fully below):
             content: "I hope you like cookies, because now you have them."
         });
     });
+
+There is a more complicated example of how you could use it with Google
+Analytics in `example/example.js`.
 
 Then you'll need some rules in your CSS to style the overlay - this one will
 put a pale grey bar along the bottom:
@@ -218,12 +228,23 @@ unless you have specified your own consent states
 * Callback when the user has refused consent
 
 
+`finish`
+
+* Callback after consent is either given or refused, for common functionality
+* It is passed one argument: `consent` is the consent state
+
+
 Changelog
 ---------
 
+1.0.2 (2012-05-30)
+
+* Added `finish` callback
+* Tidied up `example.js`, corrected version number in `cookieuse.js`
+
 1.0.1 (2012-05-28)
 
-* Added path support to $.cookieuse.clear()
+* Added path support to `$.cookieuse.clear()`
 * Rearranged examples to make files more obvious
 
 1.0.0 (2012-05-28)
@@ -231,4 +252,6 @@ Changelog
 * Initial release
 
 
-[ico]: http://www.ico.gov.uk/for_organisations/privacy_and_electronic_communications/the_guide/cookies.aspx
+[ico_law]: http://www.ico.gov.uk/~/media/documents/library/privacy_and_electronic/practical_application/guidance_on_the_new_cookies_regulations.ashx
+[ico_implicit]: http://www.ico.gov.uk/for_organisations/privacy_and_electronic_communications/the_guide/cookies.aspx
+

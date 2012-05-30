@@ -1,4 +1,4 @@
-/* v1.0.0 radiac.net/u/cookieuse */
+/*! v1.0.2 radiac.net/u/cookieuse */
 (function ($) {
     var REFUSED = 0,
         CONSENT = 1,
@@ -74,6 +74,7 @@
         } else if (consent == REFUSED) {
             if (options.refused) options.refused();
         }
+        if (options.finish) options.finish(consent);
     };
     
     $.fn.cookieuse = function (_options) {
@@ -107,6 +108,11 @@
                                 consent     Level of consent granted
                                             Default: 1
                 refused     Callback when the user has refused consent
+                finish      Callback at the end of cookieuse call - will be
+                            called after consent or refused, regardless of
+                            consent state
+                            Arguments:
+                                consent     Level of consent granted
         */
         // Set global options
         options = $.extend({}, defaults, _options || {});

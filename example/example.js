@@ -11,8 +11,8 @@ $(function () {
     $('body').cookieuse({
         content:    'This site uses cookies - you can read the <a href="cookiepolicy.html">cookie policy</a> for more information.',
         consent: function () {
-            // Abort here - we don't actually want to add google analytics to
-            // this example, just show how it could work
+            // Abort here - we don't actually want to add GA in this example
+            // To enable, remove return on the line below:
             return;
             
             // Google analytics closure
