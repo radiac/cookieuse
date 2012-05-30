@@ -10,9 +10,9 @@ consent, so it is not as intrusive as some other cookie consent plugins.
 Its only dependency is jQuery, and it is 1.3KB when minified. This project is
 released under the MIT license.
 
-Website: http://radiac.net/projects/cookieuse/
-Example: http://radiac.net/projects/cookieuse/example/
-Code:    https://github.com/radiac/cookieuse
+* Website: http://radiac.net/projects/cookieuse/
+* Example: http://radiac.net/projects/cookieuse/example/
+* Code:    https://github.com/radiac/cookieuse
 
 
 Disclaimer: This is provided to make it easier for you to comply with
