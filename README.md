@@ -252,6 +252,6 @@ Changelog
 * Initial release
 
 
-[ico_law]: http://www.ico.gov.uk/~/media/documents/library/privacy_and_electronic/practical_application/guidance_on_the_new_cookies_regulations.ashx
-[ico_implicit]: http://www.ico.gov.uk/for_organisations/privacy_and_electronic_communications/the_guide/cookies.aspx
+[ico_law]: https://ico.org.uk/for-organisations/guide-to-pecr/cookies-and-similar-technologies/
+[ico_implicit]: https://ico.org.uk/for-organisations/guide-to-pecr/cookies-and-similar-technologies/#consent
 
